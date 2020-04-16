@@ -1,0 +1,64 @@
+#masthead{
+    height:38px;
+    background-color: #d5d5d5;
+}
+
+#headerLogo{
+    float:left;
+    position: absolute;
+    width:120px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#navbar{
+    height:200px;
+
+}
+
+#EVlogo{
+    margin-left: 48px;
+    margin-top: 66px;
+    width: 200px;
+    height: 60px;
+}
+
+#hamburger{
+    position: absolute;
+    left: calc(100vw - 120px);
+    width: 48px;
+    top: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+#hamburger svg{
+    margin: 4px 6px;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#hamburgerMenu{
+        height: 0px;
+        overflow: hidden;
+        position: relative;
+        left: calc(88vw - 100px);
+        top: -100px;
+        width: 12vw;
+        padding-top: 48px;
+        padding-left: 24px;
+        z-index: 0;
+        border: 4px solid #e9e8e8;
+        border-radius: 20px;
+        opacity: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+}
+
+#hamburgerMenu li{
+    list-style-type: none;
+}
+
+#hamburgerMenu li a{
+    text-decoration: none;
+}
