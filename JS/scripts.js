@@ -9,7 +9,7 @@ document.querySelector("#hamburger").addEventListener("click", () => {
     let navMenus = document.querySelector("#masthead");
     if(menuOpen == false){
         menu.style.opacity = "1";
-        menu.style.height = "140px";
+        menu.style.height = "200px";
         document.querySelector("#hamburger svg:nth-child(3)").style.opacity = "0";
         document.querySelector("#hamburger svg:nth-child(1)").style.transform = "rotate(45deg) translate(8px, 8px)";
         document.querySelector("#hamburger svg:nth-child(2)").style.transform = "rotate(-45deg)";
@@ -19,6 +19,7 @@ document.querySelector("#hamburger").addEventListener("click", () => {
         if(isMobile){
             document.querySelector("main").style.display = "none";
             menu.style.border = "none";
+            menu.style.height = "100vh";
         }
         menuOpen = true;
     }

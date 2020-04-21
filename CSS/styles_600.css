@@ -1,3 +1,20 @@
 @media only screen and (max-width:600px){
-    
+
+   #navbar{
+        grid-template-columns: 50vw 50vw;
+   }
+
+   #EVlogo {
+        margin-left: 24px;
+   }
+   
+    #hamburgerMenu{
+        margin-left: calc(-100vw + 60px);
+        padding-top: 48px;
+        padding-left: 60px;
+    }
+
+    #hamburgerMenu li a{
+        font-size: 38px;
+    }
 }
