@@ -24,8 +24,4 @@
     #hamburgerMenu li{
         border-bottom: 2px solid white;
     }
-
-    #hamburgerMenu li:hover a{
-        color:#7047F3;;
-    }
 }

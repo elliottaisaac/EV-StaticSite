@@ -77,3 +77,7 @@ nav{
     line-height: 165%;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#hamburgerMenu li:hover a{
+    color:#7047F3;;
+}
