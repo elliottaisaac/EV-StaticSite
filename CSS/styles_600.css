@@ -9,12 +9,20 @@
    }
    
     #hamburgerMenu{
-        margin-left: calc(-100vw + 60px);
-        padding-top: 48px;
-        padding-left: 60px;
+        margin-left: calc(-100vw + 72px);
     }
 
     #hamburgerMenu li a{
         font-size: 38px;
+        line-height: 200%;
+        padding-left: 12px;
+    }
+
+    #hamburgerMenu li{
+        border-bottom: 2px solid white;
+    }
+
+    #hamburgerMenu li:hover a{
+        color:#7047F3;;
     }
 }
