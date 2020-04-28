@@ -3,6 +3,10 @@ body{
     margin:0px;
 }
 
+main{
+    min-height: 40vh;
+}
+
 .hidden{
     display: none;
 }
