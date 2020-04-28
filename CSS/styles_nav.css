@@ -101,16 +101,17 @@ nav{
     		height: 45px;
 }
 	#hamburger{
-    		left: calc(100vw - 70px);
+    		left: calc(100vw - 80px);
     		width: 48px;
-    		top: 70px;
+    		top: 100px;
+            margin-top: -25px;
 }
 	#hamburgerMenu{
-        	height: 0px;
+            margin-top: 35px;
         	left: calc(88vw - 120px);
         	top: -100px;
-        	width: 15vw;
-        	padding-top: 60px;
-        	padding-left: 24px;
+        	width: 100vw;
+        	padding-top: 00px;
+        	padding-left: 00px;
 }
 }
