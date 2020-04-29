@@ -1,0 +1,104 @@
+﻿#pageTitle {
+    padding-top: 20px;
+    margin-left: calc(50vw - 190px);
+
+    font-size: 38px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#hubNav{
+    margin-top:40px;
+    height:80vh;
+    width:100vw;
+}
+
+#hubList{
+    float:left;
+    width:35vw;
+    height:60vh;
+    background-color:brown;
+    align-self:center;
+    margin-top:10px;
+    overflow:hidden;
+}
+
+#hubNames li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    list-style-type: none;
+    height: 4vh;
+    width: 30vw;
+    background-color: deepskyblue;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-decoration-style: none;
+    padding-top:15px;
+}
+
+#hubNames li a {
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+}
+
+#hubInfo{
+    float:right;
+    margin-right: 100px;
+    width:55vw;
+    height: 60vh;
+    border: 5px solid black;
+    border-color:black;
+}
+
+#hubDescription{
+    float:left;
+    width:25vw;
+}
+
+#hubTitle {
+    margin-top:40px;
+    text-align: center;
+    font-size: 28px;
+    font-weight:900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hubDescriptionText {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hubPics{
+    margin-top:50px;
+    float:right;
+    margin-right: 25px;
+    width: 25vw;
+}
+
+#mainHubPic{
+    height: 300px;
+    width:400px;
+}
+
+#galleryPics{
+    width:400px;
+}
+
+#gallery1 {
+    height: 100px;
+}
+
+#gallery2 {
+    height: 100px;
+}
+
+#gallery3 {
+    height: 100px;
+}
