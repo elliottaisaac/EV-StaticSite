@@ -34,6 +34,7 @@ nav{
     width: 200px;
     height: 60px;
     grid-column: 1/2;
+    cursor: pointer;
 }
 
 #hamburger{
@@ -53,33 +54,40 @@ nav{
         height: 0px;
         background-color:#7047F3;
         overflow: hidden;
-        margin-top: 60px;
-        padding: 28px 32px 16px 32px;
-        z-index: -1;
+        z-index: 2;
         opacity: 0;
         overflow: hidden;
+        margin-top: -96px;
+        width: 55vw;
+        position: absolute;
+        z-index: -1;
+        right:0px;
         transition: height 0.375s ease-in-out;
 }
 
 #hamburgerMenu li{
     list-style-type: none;
-    border-bottom: 2px solid white;
+    display: inline-block;
+    margin-top: 32px;
+    margin-right: -96px;
+    border-bottom: 4px solid white;
+    border-radius: 6px;
+    transform: rotate(-45deg);
+    width: 200px;
 }
 
 #hamburgerMenu li a{
+    font-family: museo-sans, sans-serif;
+    font-weight: bolder;
     text-decoration: none;
     color: white;
     font-size: 24px;
     line-height: 165%;
-    font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
     padding-left: 6px;
     width: 100%;
 }
 
-#hamburgerMenu li:hover {
-    background-color: white;
-}
 
 #hamburgerMenu li:hover a{
     color:#7047F3;;
