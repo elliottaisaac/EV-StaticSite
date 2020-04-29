@@ -77,7 +77,6 @@
 }
 
 #homepageCarousel{
-    grid-area: 2 / 2 / span 1 / span 1;
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
