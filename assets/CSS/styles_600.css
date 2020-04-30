@@ -54,4 +54,9 @@
     #curtain{
         grid-area: 3 / 1 / span 1 / span 1;
     }
+
+    .left-half1, .left-half2,.right-half1 , .right-half2{
+        margin-left: 16px;
+        margin-right: 16px;
+      }
 }
