@@ -160,6 +160,13 @@ background: grey;
   opacity: 1;
 }
 
+.left-half1, .left-half2,.right-half1 , .right-half2{
+  margin: auto;
+}
+.left-half2{
+  margin-bottom: 60px;
+}
+
 
 @media only screen and (max-width:420px){
   .grid-container{
