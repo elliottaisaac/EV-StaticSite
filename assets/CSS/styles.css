@@ -6,6 +6,10 @@
 
 @import "styles_homepage.css";
 
+@import "styles_indivHubPage.css";
+
+/* @import "styles_exhibition.css"; */
+
 @import "styles_1200.css";
 
 @import "styles_800.css";

@@ -42,7 +42,8 @@ nav{
     display: flex;
     flex-wrap: wrap;
     z-index: 2;
-    margin-left: calc(100% - 60px);
+    left: calc(100% - 60px);
+    position: relative;
 }
 
 #hamburger svg{
@@ -60,7 +61,7 @@ nav{
         margin-top: -96px;
         width: 55vw;
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         right:0px;
         transition: height 0.375s ease-in-out;
 }
@@ -90,5 +91,5 @@ nav{
 
 
 #hamburgerMenu li:hover a{
-    color:#7047F3;;
+    color: black;
 }

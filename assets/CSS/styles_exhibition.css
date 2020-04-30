@@ -1,0 +1,192 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* "Mobile first" CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+    font-family: museo-sans, sans-serif;
+    width: 350px;
+    margin: 32px;
+	
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: #1a9ddd;
+    line-height: 55px;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+p{
+    font-weight: 500;
+}
+
+#banner{
+    background-color: #e2e2e2;
+    width: 330px;
+    height: 29px;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+
+}
+
+#banner h3{
+    margin-top: 7px;
+}
+
+#goals{
+    background-color: #e2e2e2;
+    width: 330px;
+    height: 450px;  
+}
+
+ul{
+    width: 279px;
+    height: 374px;
+}
+
+#one, #two, #three, #four{
+    background-color: #1a9ddd;
+    width: 330px;
+    height: 39px;  
+}
+
+#one p, #two p, #three p, #four p{
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    text-align: center;
+    padding-top:10px;
+}
+
+#team-header{
+    font-size: 33px;
+    font-weight: 700;
+    letter-spacing: 1.188px;
+    color: #005077;
+    line-height: 40px;
+}
+
+#team{
+    background-color: rgba(49,49,49,.8);
+    width: 336px;
+    height: 363px;
+}
+
+#team ul{
+    font-size: 15px;
+    font-weight: 700;
+    color: #f4f3f7; 
+
+}
+
+#team li{
+    margin: 6px;
+    margin-top: 10px;
+}
+
+
+#beachy, #williams{
+    background-color: #d9e2e8;
+    width: 206px;
+    height: 206px;
+    text-align: center;
+}
+#beachy {
+  margin-top: 10px;
+  float: right;
+}
+#bphoto {
+    float: left;
+     margin-top: 10px;
+}
+
+#williams {
+  float: left;
+  margin-top: 10px;
+}
+#cphoto {
+    float: right;
+     margin-top: 10px;
+}
+
+#beachy h3, #williams h3{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+======================================== */
+
+/* New CSS for tablet sizes.
+You can change the pixel number below */
+@media all and (min-width: 768px) {
+	
+	
+	
+	
+} /* closes 768px+ */
+
+
+
+
+/* New CSS for desktop sizes.
+You can change the pixel number below */
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} /* closes 1024px+ */
+
+
+
+
+

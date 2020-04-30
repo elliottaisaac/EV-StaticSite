@@ -5,6 +5,8 @@ if(document.documentElement.clientWidth < 600) isMobile = true;
     let menuOpen = false;
     let burgerMenuHeight = 156;
 
+    
+
     document.querySelector("#hamburger").addEventListener("click", () => {
         let menu = document.querySelector("#hamburgerMenu");
         let nav = document.querySelector("nav");
