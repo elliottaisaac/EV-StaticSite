@@ -56,7 +56,6 @@
     }
 
     .left-half1, .left-half2,.right-half1 , .right-half2{
-        margin-left: 16px;
-        margin-right: 16px;
+        margin:24px 16px;
       }
 }
