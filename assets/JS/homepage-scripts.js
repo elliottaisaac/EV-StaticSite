@@ -33,23 +33,24 @@
                 });
             });
 
-            function GetDistance(x1, y1, x2, y2){
-                return Math.sqrt( Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-            }
-
             let lowNum = 0;
             for(let i=0; i<distances.length; i++){
                     if(distances[i].distance < distances[lowNum].distance)lowNum = i;
             }
             document.querySelector(`#${distances[lowNum].name}`).style.fill = "#ffffff";
             document.querySelector(`#${distances[lowNum].name}`).setAttribute('r', "10" );
-            document.querySelector(`.${distances[lowNum].name}.label`).style.fill = /*"#223767"*/ "#613cf5";
+            document.querySelector(`.${distances[lowNum].name}.label`).style.fill = "#613cf5";
             document.querySelector(`.${distances[lowNum].name}.label`).classList.add("slide-in");
 
             Slide(lowNum + 1);
         } 
         else document.querySelector("#lockText").innerHTML = "Click to unlock";
     }
+
+    function GetDistance(x1, y1, x2, y2){
+        return Math.sqrt( Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+    }
+
 //------------------------------------------------------------------------------------------->
 
 
