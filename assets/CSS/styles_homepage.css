@@ -27,7 +27,7 @@
 #lineNav svg{
     height: 500px;
     width: 350px;
-    margin: 120px 0px 0px 32px;
+    margin: 180px 0px 0px 32px;
     cursor: pointer;
 }
 
@@ -54,6 +54,7 @@
 #carouselText{
     width: 90%;
     margin: 0% 5%;
+    height: 400px;
 }
 
 .carouselText{
@@ -77,7 +78,6 @@
 }
 
 .carouselCaption1{
-    margin-top: 16px;
     transform: translateX(calc(8vw + 5%));
 }
 
