@@ -1,174 +1,245 @@
-/* Basic CSS resets -- leveling slight inconsistencies in browsers */
-
-
-
-/* "Mobile first" CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
-
-
-h1{
-    font-size: 50px;
-    font-weight: 900;
-    color: #1a9ddd;
-    line-height: 55px;
+* {
+  box-sizing: border-box;
 }
 
-h3{
-    font-size: 20px;
-    font-weight: 900;
+html, body {
+  height: 100%;
+  font-family: museo-sans, sans-serif;
+  margin: 0;
 }
 
-p{
-    font-weight: 500;
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #1a9ddd;
+  line-height: 55px;
 }
 
-#banner{
-    background-color: #e2e2e2;
-    width: 330px;
-    height: 29px;
-    font-size: 20px;
-    font-weight: 900;
-    font-style: italic;
-    text-align: center;
-
+h3 {
+  font-size: 20px;
+  font-weight: 900;
 }
 
-#banner h3{
-    margin-top: 7px;
+p {
+  font-weight: 500;
 }
 
-#goals{
-    background-color: #e2e2e2;
-    width: 330px;
-    height: 450px;  
+#content-mission {
+  display: flex;
+  padding: 0 48px 0 56px;
+  flex-direction: column;
+  align-items: baseline;
 }
 
-ul{
-    width: 279px;
-    height: 374px;
+#content-approach {
+  display: flex;
+  padding: 0 48px 0 56px;
+  flex-direction: column;
+  align-items: baseline;
 }
 
-#one, #two, #three, #four{
-    background-color: #1a9ddd;
-    width: 330px;
-    height: 39px;  
+#content-goal {
+  background-color: #e2e2e2;
+  padding-bottom: 20px;
 }
 
-#one p, #two p, #three p, #four p{
-    font-size: 20px;
-    font-weight: 900;
-    font-style: italic;
-    color: #ffffff;
-    text-align: center;
-    padding-top:10px;
+#content-goal h3 {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
-#team-header{
-    font-size: 33px;
-    font-weight: 700;
-    letter-spacing: 1.188px;
-    color: #005077;
-    line-height: 40px;
+#goals {
+  letter-spacing: 1.188px;
+  margin: 0 48px 0 56px;
+  text-align: left;
 }
 
-#team{
-    background-color: rgba(49,49,49,.8);
-    width: 336px;
-    height: 363px;
+.links {
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-#team ul{
-    font-size: 15px;
-    font-weight: 700;
-    color: #f4f3f7; 
-
+.link-effect a {
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  color: #000;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none;
+  color: #000;
+  margin: 0 20px;
+  padding: 10px;
+  position: relative;
+  transition: 0.3s ease-out 0.1s;
+}
+.link-effect a span::before {
+  height: 100%;
+  width: 2px;
+  background: black;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: 0.3s;
+}
+.link-effect a span::after {
+  height: 100%;
+  width: 2px;
+  background: black;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: 0.3s;
+}
+.link-effect a::before {
+  height: 2px;
+  width: 100%;
+  background: black;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: 0.3s;
+}
+.link-effect a::after {
+  height: 2px;
+  width: 100%;
+  background: black;
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  transform: scaleY(0);
+  transition: 0.3s;
+}
+.link-effect a:hover {
+  color: black;
+}
+.link-effect a:hover::before, .link-effect a:hover::after {
+  transform: scaleX(1);
+}
+.link-effect a:hover span::before, .link-effect a:hover span::after {
+  transform: scaleY(1);
 }
 
-#team li{
-    margin: 6px;
-    margin-top: 10px;
+.grid-container {
+  margin: 60px 0px 60px 0px;
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px 1px;
+  grid-template-areas: "content-team content-team content-team team-header";
 }
 
-
-#beachy, #williams{
-    background-color: #d9e2e8;
-    width: 206px;
-    height: 206px;
-    text-align: center;
-}
-#beachy {
-  margin-top: 10px;
-  float: right;
-}
-#bphoto {
-    float: left;
-     margin-top: 10px;
+.content-team {
+  background-color: rgba(49, 49, 49, 0.8);
+  grid-area: content-team;
+  font-size: 15px;
+  color: #f4f3f7;
+  padding: 16px 48px 0 16px;
+  line-height: 35px;
 }
 
-#williams {
-  float: left;
-  margin-top: 10px;
-}
-#cphoto {
-    float: right;
-     margin-top: 10px;
+.team-header {
+  margin: 0;
+  grid-area: team-header;
+  writing-mode: vertical-lr;
 }
 
-#beachy h3, #williams h3{
-    margin-top: 10px;
+#team-vertText {
+  font-size: 33px;
+  font-weight: 700;
+  color: #005077;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* A better looking default horizontal rule */
-hr {
-    display: block;
-    height: 1px;
-    border: 0px;
-    border-top: 1px solid #ccc;
-    margin: 1em 0px;
-    padding: 0px;
+.content-staff1 {
+  display: grid;
+  margin: 60px 0px 60px 0px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 1px 1px;
 }
 
+.img-staff-left {
+  grid-area: 2/1/5/4;
+  z-index: 99;
+}
 
+.img-staff-left img {
+  width: 100%;
+}
+
+.info-staff-right {
+  z-index: -1;
+  background-color: #d9e2e8;
+  grid-area: 1/3/8/9;
+}
+
+.info-staff-right .info {
+  padding: 40px 40px 0px 130px;
+}
+
+.content-staff2 {
+  display: grid;
+  margin: 60px 0px 60px 0px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 1px 1px;
+}
+
+.img-staff-right {
+  grid-area: 3/6/6/9;
+  z-index: 99;
+}
+
+.img-staff-right img {
+  width: 100%;
+}
+
+.info-staff-left {
+  z-index: -1;
+  background-color: #d9e2e8;
+  grid-area: 2/1/7/7;
+}
+
+.info-staff-left .info {
+  padding: 40px 130px 0px 40px;
+}
 
 /* ========================================
 MEDIA QUERIES!
 ======================================== */
+@media only screen and (max-width: 420px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-/* New CSS for tablet sizes.
-You can change the pixel number below */
-@media all and (min-width: 768px) {
-	
-	
-	
-	
-} /* closes 768px+ */
+  .content-team {
+    font-size: 15px;
+    line-height: 20px;
+  }
 
+  .team-header {
+    writing-mode: horizontal-tb;
+    position: absolute;
+  }
 
+  .content-staff1 {
+    display: flex;
+    grid-template-columns: 1fr;
+  }
 
+  .img-staff-left {
+    position: absolute;
+  }
+}
 
-/* New CSS for desktop sizes.
-You can change the pixel number below */
-@media all and (min-width: 1024px) {
-	
-	
-	
-	
-} /* closes 1024px+ */
-
-
-
-
-
+/*# sourceMappingURL=styles_exhibition.css.map */

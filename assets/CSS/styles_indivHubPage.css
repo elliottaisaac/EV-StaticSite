@@ -64,13 +64,13 @@ background: grey;
 .sub-title{
   margin-top:50px;
   text-transform: uppercase;
-  color: #7047F3;
+  color:var(--main-color);;
 	font-size: 20px;
 }
 
 .right-half2 button{
 	border-radius: 3px;
-	background-color:  #7047F3;
+	background-color: var(--main-color);
 	color: #FFF;
 	border: 0;
   position: relative;

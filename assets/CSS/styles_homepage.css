@@ -14,7 +14,7 @@
     grid-area: 1 / 1 / span 2 / span 1;
     font-size: 500%;
     font-family: museo-sans, sans-serif;
-    color: #582AEC;
+    color: var(--main-color);
     padding:60px;
     font-weight: bolder;
     min-height: 80vh;
@@ -47,7 +47,7 @@
 }
 
 .carouselText{
-    color: #223767;
+    color: var(--main-color-dark);;
     font-family: museo-sans, sans-serif;
 }
 

@@ -53,7 +53,7 @@ nav{
 
 #hamburgerMenu{
         height: 0px;
-        background-color:#7047F3;
+        background-color:var(--main-color);;
         overflow: hidden;
         z-index: 2;
         opacity: 0;
