@@ -28,6 +28,7 @@
     height: 500px;
     width: 350px;
     margin: 120px 0px 0px 32px;
+    cursor: pointer;
 }
 
 .linePlotLabel{
@@ -35,6 +36,15 @@
     font-weight: bold;
     transform: translateX(125px);
     transition: transform 0.15s ease-out;
+    cursor: pointer;
+}
+
+#lockText{
+    font-family: var(--primary-font);
+    font-size: 10px;
+    font-weight: bolder;
+    font-style: italic;
+    opacity: 0;
 }
 
 .slide-in{
@@ -47,7 +57,7 @@
 }
 
 .carouselText{
-    color: var(--main-color-dark);;
+    color: var(--main-color-dark);
     font-family: museo-sans, sans-serif;
 }
 
@@ -102,4 +112,49 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px 12px;
+}
+
+.linkBtn{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 12px;
+    width: 200px;
+    font-weight: 700;
+    margin: 0px 24px 48px 0px;
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-size: .875em;
+    letter-spacing: 1.5px;
+    border: none;
+    font-family: var(--primary-font);
+}
+.linkBtn:hover, .linkBtn a:hover{
+    background-color: var(--main-color-dark) !important;
+}
+
+.linkBtn a{
+    height: 100%;
+    width: 100%;
+}
+
+.arrow{
+    background-image: url(../img/arrow.svg);
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+
+.linkBtn a:hover .linkBtn {
+    background-color: var(--main-color-dark) !important;
+}
+.linkBtn a:hover .arrow{
+    transform: translateX(24px)
 }

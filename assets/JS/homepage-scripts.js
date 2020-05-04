@@ -1,40 +1,60 @@
 //Line-Plot Navigation ------------------------------------------------------------------------------------------->
+    window.addEventListener("load", (e) => { NavigateLinePlot(e) });
+    document.querySelector("#lineNav").addEventListener("mousemove", (e) => { NavigateLinePlot(e) });
+    
     let distances;
-    lineNav
-    document.querySelector("#lineNav").addEventListener("mousemove", (e) => {
-        distances = [];
-        let mouseXpos = e.clientX;
-        let mouseYpos = e.clientY;
+    let frozen = false;
 
-        document.querySelectorAll(".linePlotNav").forEach(dot => {
-            let Dot = {
-                distance: GetDistance(mouseXpos, mouseYpos, dot.getBoundingClientRect().left, dot.getBoundingClientRect().top),
-                name: dot.id
-            }
-            distances.push(Dot);
-            dot.style.fill = "#613cf5";
-            dot.setAttribute('r', "6" );
-            document.querySelectorAll(".linePlotLabel").forEach(l => {
-                l.style.fill = "transparent"; 
-                l.classList.remove("slide-in");
-            });
-        });
-
-        function GetDistance(x1, y1, x2, y2){
-            return Math.sqrt( Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-        }
-
-        let lowNum = 0;
-        for(let i=0; i<distances.length; i++){
-                if(distances[i].distance < distances[lowNum].distance) lowNum = i;
-        }
-        document.querySelector(`#${distances[lowNum].name}`).style.fill = "#ffffff";
-        document.querySelector(`#${distances[lowNum].name}`).setAttribute('r', "10" );
-        document.querySelector(`.${distances[lowNum].name}.label`).style.fill = /*"#223767"*/ "#613cf5";
-        document.querySelector(`.${distances[lowNum].name}.label`).classList.add("slide-in");
-
-        Slide(lowNum + 1);
+    document.querySelector("#lineNav").addEventListener("click", () => { 
+        if(frozen) frozen = false;
+        else frozen = true;
     });
+
+    document.querySelector("#lineNav svg").addEventListener("mouseover", () => { 
+        document.querySelector("#lockText").style.opacity = 1;
+    });
+    document.querySelector("#lineNav svg").addEventListener("mouseout", () => { 
+        document.querySelector("#lockText").style.opacity = 0;
+    });
+
+    function NavigateLinePlot(e){
+        if(!frozen){
+            document.querySelector("#lockText").innerHTML = "Click to lock";
+            distances = [];
+            let mouseXpos = e.clientX;
+            let mouseYpos = e.clientY;
+
+            document.querySelectorAll(".linePlotNav").forEach(dot => {
+                let Dot = {
+                    distance: GetDistance(mouseXpos, mouseYpos, dot.getBoundingClientRect().left, dot.getBoundingClientRect().top),
+                    name: dot.id
+                }
+                distances.push(Dot);
+                dot.style.fill = "#613cf5";
+                dot.setAttribute('r', "6" );
+                document.querySelectorAll(".linePlotLabel").forEach(l => {
+                    l.style.fill = "transparent"; 
+                    l.classList.remove("slide-in");
+                });
+            });
+
+            function GetDistance(x1, y1, x2, y2){
+                return Math.sqrt( Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+            }
+
+            let lowNum = 0;
+            for(let i=0; i<distances.length; i++){
+                    if(distances[i].distance < distances[lowNum].distance)lowNum = i;
+            }
+            document.querySelector(`#${distances[lowNum].name}`).style.fill = "#ffffff";
+            document.querySelector(`#${distances[lowNum].name}`).setAttribute('r', "10" );
+            document.querySelector(`.${distances[lowNum].name}.label`).style.fill = /*"#223767"*/ "#613cf5";
+            document.querySelector(`.${distances[lowNum].name}.label`).classList.add("slide-in");
+
+            Slide(lowNum + 1);
+        } 
+        else document.querySelector("#lockText").innerHTML = "Click to unlock";
+    }
 //------------------------------------------------------------------------------------------->
 
 
@@ -50,7 +70,7 @@
             caption2: "Art Caption Line Two",
         },
         {
-            name: "Artists",
+            name: "Art",
             headline: "Lorum Artistsum",
             subhead: "Sed vulputate tortor non suscipit commodo.",
             paragraphText: "Nunc eu erat ut nibh scelerisque tincidunt ac ac sem. Maecenas a nisi metus. Aliquam feugiat ipsum sed erat gravida, et pretium est facilisis. Suspendisse eget volutpat erat. Nunc nulla diam, consequat non posuere vel, gravida sed ipsum. Sed tempor vulputate diam maximus viverra. Vivamus pretium nisl velit, vitae malesuada est tempor in. Aliquam ac efficitur sem. Sed sodales dignissim semper. Curabitur dapibus, nibh vitae luctus pretium, nulla libero eleifend magna, id aliquam mauris dolor quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam a nibh ultricies, dapibus diam id, mollis felis. Phasellus malesuada lorem euismod dui mollis lobortis vitae sit amet nulla. Nulla facilisi. Suspendisse id arcu eget sem auctor lobortis. Curabitur et.",
@@ -68,7 +88,7 @@
             caption2: "Hubs Caption Line Two",
         },
         {
-            name: "Tour",
+            name: "About",
             headline: "Lorum Toursum",
             subhead: "Sed vulputate tortor non suscipit commodo.",
             paragraphText: "Maecenas mauris enim, vehicula at ullamcorper nec, dignissim vel elit. Pellentesque sed egestas dui. Suspendisse a dictum dui. Mauris dui nunc, imperdiet quis suscipit eget, imperdiet in ipsum. Aliquam felis libero, elementum sed tortor sodales, lacinia fermentum dui. Sed ut ante massa. Nullam eget varius nibh. Fusce ornare at sapien nec sagittis. Nulla facilisi. Donec purus nisl, iaculis eu bibendum varius, ornare eget lectus. Etiam sodales fringilla eros, dapibus dapibus ligula scelerisque quis.",
@@ -125,6 +145,10 @@
         sub.innerHTML = carouselObjects[slide-1].subhead;
         para.innerHTML = carouselObjects[slide-1].paragraphText;
         cap1.innerHTML = carouselObjects[slide-1].caption1 + `<br><span class="carouselCaption2">${carouselObjects[slide-1].caption2}</span>`;
+
+        document.querySelector(".linkBtn").addEventListener("click", () =>{
+            document.querySelector(".linkBtn a").href = `${carouselObjects[slide-1].name}.html`;
+        });  
 
         // progBar.style.gridColumnStart = slide;
         // progBar.style.gridColumnEnd = slide + 1;

@@ -1,6 +1,7 @@
 :root {
     --main-color: #1A9DDD;
     --main-color-dark: #0C628D;
+    --primary-font: museo-sans, sans-serif;
 }
 
 body{
