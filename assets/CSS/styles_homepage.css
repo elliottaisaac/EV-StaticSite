@@ -138,6 +138,11 @@
     width: 100%;
 }
 
+.linkBtn a:link, .linkBtn a:visited, .linkBtn a:active{
+    color:#fff;
+    text-decoration: none;
+}
+
 .arrow{
     background-image: url(../img/arrow.svg);
     width: 20px;

@@ -1,22 +1,17 @@
 //Line-Plot Navigation ------------------------------------------------------------------------------------------->
-    window.addEventListener("load", (e) => { NavigateLinePlot(e) });
-    document.querySelector("#lineNav").addEventListener("mousemove", (e) => { NavigateLinePlot(e) });
+    window.addEventListener("load", (e) => NavigateLinePlot(e) );
+    document.querySelector("#lineNav").addEventListener("mousemove", (e) => NavigateLinePlot(e) );
     
-    let distances;
     let frozen = false;
-
     document.querySelector("#lineNav").addEventListener("click", () => { 
         if(frozen) frozen = false;
         else frozen = true;
     });
 
-    document.querySelector("#lineNav svg").addEventListener("mouseover", () => { 
-        document.querySelector("#lockText").style.opacity = 1;
-    });
-    document.querySelector("#lineNav svg").addEventListener("mouseout", () => { 
-        document.querySelector("#lockText").style.opacity = 0;
-    });
+    document.querySelector("#lineNav svg").addEventListener("mouseover", () => document.querySelector("#lockText").style.opacity = 1);
+    document.querySelector("#lineNav svg").addEventListener("mouseout", () => document.querySelector("#lockText").style.opacity = 0);
 
+    let distances;
     function NavigateLinePlot(e){
         if(!frozen){
             document.querySelector("#lockText").innerHTML = "Click to lock";
@@ -107,7 +102,6 @@
         }
     ]
 
-
     let slideWidth = 400;
     slideWidth = slideWidth * 5;
     let slide = 1;
@@ -116,16 +110,6 @@
     const sub = document.querySelector(".carouselText.subhead");
     const para = document.querySelector(".carouselText.paragraph");
     const cap1 = document.querySelector(".carouselCaption1");
-
-    // let progBar = document.querySelector("#sliderProgressBar");
-    /*
-    document.querySelector("#vertText").addEventListener("click", () => {
-        Slide();
-    });
-
-    document.querySelector("#masthead").addEventListener("click", () => {
-        slideLeft();
-    }); */
 
     function Slide (target) {
         if (slide < 5) {
@@ -149,9 +133,6 @@
         document.querySelector(".linkBtn").addEventListener("click", () =>{
             document.querySelector(".linkBtn a").href = `${carouselObjects[slide-1].name}.html`;
         });  
-
-        // progBar.style.gridColumnStart = slide;
-        // progBar.style.gridColumnEnd = slide + 1;
     }
 
 
@@ -207,5 +188,4 @@
         if(slide == 0) slide = 5;
         slideFrame();
     }
-
 //------------------------------------------------------------------------------------------->
