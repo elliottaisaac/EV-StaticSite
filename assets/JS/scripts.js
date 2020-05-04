@@ -50,7 +50,7 @@ if(document.documentElement.clientWidth < 600) isMobile = true;
         let scroll = document.querySelector("html").scrollTop;
         const nv = document.querySelector("#navbar");
         if(scroll < prevScroll && scroll > 194) nv.classList.add("stickyNav");
-        else nv.classList.remove("stickyNav");
+        else if(scroll > prevScroll || scroll < 38) nv.classList.remove("stickyNav");
         prevScroll = scroll <= 0 ? 0 : scroll;
     });
 
@@ -59,7 +59,7 @@ if(document.documentElement.clientWidth < 600) isMobile = true;
     document.querySelector("#EVlogo").addEventListener("mouseout", () => document.querySelector("#EVlogo").src = "assets/img/EV.svg");
     document.querySelector("#headerLogo").addEventListener("mouseover", () => document.querySelector("#headerLogo").src = "assets/img/IHcolor.svg");
     document.querySelector("#headerLogo").addEventListener("mouseout", () => document.querySelector("#headerLogo").src = "assets/img/IH.svg");
-    
+
 // -------------------------------------------------------------------------------------------> nav scripts
 
 

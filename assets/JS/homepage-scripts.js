@@ -87,7 +87,7 @@
             caption2: "Art Caption Line Two",
         },
         {
-            name: "Art",
+            name: "Artists",
             headline: "Lorum Artistsum",
             subhead: "Sed vulputate tortor non suscipit commodo.",
             paragraphText: "Nunc eu erat ut nibh scelerisque tincidunt ac ac sem. Maecenas a nisi metus. Aliquam feugiat ipsum sed erat gravida, et pretium est facilisis. Suspendisse eget volutpat erat. Nunc nulla diam, consequat non posuere vel, gravida sed ipsum. Sed tempor vulputate diam maximus viverra. Vivamus pretium nisl velit, vitae malesuada est tempor in. Aliquam ac efficitur sem. Sed sodales dignissim semper. Curabitur dapibus, nibh vitae luctus pretium, nulla libero eleifend magna, id aliquam mauris dolor quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam a nibh ultricies, dapibus diam id, mollis felis. Phasellus malesuada lorem euismod dui mollis lobortis vitae sit amet nulla. Nulla facilisi. Suspendisse id arcu eget sem auctor lobortis. Curabitur et.",
