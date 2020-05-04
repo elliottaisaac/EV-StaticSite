@@ -5,8 +5,6 @@ if(document.documentElement.clientWidth < 600) isMobile = true;
     let menuOpen = false;
     let burgerMenuHeight = 156;
 
-    
-
     document.querySelector("#hamburger").addEventListener("click", () => {
         let menu = document.querySelector("#hamburgerMenu");
         let nav = document.querySelector("nav");
@@ -45,6 +43,20 @@ if(document.documentElement.clientWidth < 600) isMobile = true;
             menuOpen = false;
         }
     });
+
+    //sticky nav on upscroll
+    let prevScroll = 0;
+    window.addEventListener("scroll", () =>{
+        let scroll = document.querySelector("html").scrollTop;
+        const nv = document.querySelector("#navbar");
+        if(scroll < prevScroll && scroll > 194) nv.classList.add("stickyNav");
+        else nv.classList.remove("stickyNav");
+        prevScroll = scroll <= 0 ? 0 : scroll;
+    });
+
+    //color EV logo on hover
+    document.querySelector("#EVlogo").addEventListener("mouseover", () => document.querySelector("#EVlogo").src = "assets/img/EVcolor.svg");
+    document.querySelector("#EVlogo").addEventListener("mouseout", () => document.querySelector("#EVlogo").src = "assets/img/EV.svg");
 // -------------------------------------------------------------------------------------------> nav scripts
 
 

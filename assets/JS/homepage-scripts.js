@@ -1,4 +1,30 @@
 //Line-Plot Navigation ------------------------------------------------------------------------------------------->
+    //auto-sets all coordinates in the SVG
+    let coords = [
+       { x:212,y:12 },
+       { x:12, y:142 },
+       { x:192,y:272 },
+       { x:34, y:402 },
+       { x:202,y:538 }
+    ];
+
+    document.querySelector("#lineNav svg path").setAttribute("d", `M${coords[0].x} ${coords[0].y} L${coords[1].x} ${coords[1].y} L${coords[2].x} ${coords[2].y} L${coords[3].x} ${coords[3].y} L${coords[4].x} ${coords[4].y}`);
+    
+    let idx = 0;
+    document.querySelectorAll("#lineNav svg g circle").forEach(circle => {
+        circle.setAttribute("cx", coords[idx].x);
+        circle.setAttribute("cy", coords[idx].y);
+        circle.setAttribute("r", "6");
+        circle.style.fill = "#613cf5";
+        idx++;
+    });
+    idx = 0;
+    document.querySelectorAll(".linePlotLabel").forEach(text => {
+        text.setAttribute("x", coords[idx].x);
+        text.setAttribute("y", coords[idx].y);
+        idx++;
+    });
+
     window.addEventListener("load", (e) => NavigateLinePlot(e) );
     document.querySelector("#lineNav").addEventListener("mousemove", (e) => NavigateLinePlot(e) );
     
@@ -8,25 +34,21 @@
         else frozen = true;
     });
 
-    document.querySelector("#lineNav svg").addEventListener("mouseover", () => document.querySelector("#lockText").style.opacity = 1);
-    document.querySelector("#lineNav svg").addEventListener("mouseout", () => document.querySelector("#lockText").style.opacity = 0);
+    document.querySelector("#lineNav").addEventListener("mouseover", () => document.querySelector("#lockText").style.opacity = 1);
+    document.querySelector("#lineNav").addEventListener("mouseout", () => document.querySelector("#lockText").style.opacity = 0);
 
     let distances;
     function NavigateLinePlot(e){
         if(!frozen){
             document.querySelector("#lockText").innerHTML = "Click to lock";
             distances = [];
-            let mouseXpos = e.clientX;
-            let mouseYpos = e.clientY;
-
+            
             document.querySelectorAll(".linePlotNav").forEach(dot => {
                 let Dot = {
-                    distance: GetDistance(mouseXpos, mouseYpos, dot.getBoundingClientRect().left, dot.getBoundingClientRect().top),
+                    distance: GetDistance(e.clientX, e.clientY, dot.getBoundingClientRect().left, dot.getBoundingClientRect().top),
                     name: dot.id
                 }
                 distances.push(Dot);
-                dot.style.fill = "#613cf5";
-                dot.setAttribute('r', "6" );
                 document.querySelectorAll(".linePlotLabel").forEach(l => {
                     l.style.fill = "transparent"; 
                     l.classList.remove("slide-in");
@@ -34,8 +56,8 @@
             });
 
             let lowNum = 0;
-            for(let i=0; i<distances.length; i++){
-                    if(distances[i].distance < distances[lowNum].distance)lowNum = i;
+            for(let i = 0; i < distances.length; i++){
+                    if(distances[i].distance < distances[lowNum].distance) lowNum = i;
             }
             document.querySelector(`#${distances[lowNum].name}`).style.fill = "#ffffff";
             document.querySelector(`#${distances[lowNum].name}`).setAttribute('r', "10" );
@@ -50,7 +72,6 @@
     function GetDistance(x1, y1, x2, y2){
         return Math.sqrt( Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
-
 //------------------------------------------------------------------------------------------->
 
 
@@ -124,7 +145,6 @@
     function slideFrame() {
         const transform = `translateX(${-(slide - 1) * 40 + 10}vw)`;
         document.querySelector("#homepageCarousel").style.transform = transform;
-        slides[slide - 1].click();
 
         head.innerHTML = carouselObjects[slide-1].headline;
         sub.innerHTML = carouselObjects[slide-1].subhead;
@@ -136,7 +156,7 @@
         });  
     }
 
-
+    //mobile swiping behavior
     if(isMobile){
         document.querySelector("#homepageCarousel").addEventListener('touchstart', handleTouchStart, false);        
         document.querySelector("#homepageCarousel").addEventListener('touchmove', handleTouchMove, false);
@@ -182,6 +202,7 @@
             yDown = null;                                             
         };
     }
+
     function slideLeft() {
         if (slide > 0) {
             slide--;

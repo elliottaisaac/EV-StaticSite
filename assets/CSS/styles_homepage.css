@@ -25,7 +25,7 @@
 }
 
 #lineNav svg{
-    height: 500px;
+    height: 550px;
     width: 350px;
     margin: 180px 0px 0px 32px;
     cursor: pointer;
@@ -36,7 +36,6 @@
     font-weight: bold;
     transform: translateX(125px);
     transition: transform 0.15s ease-out;
-    cursor: pointer;
 }
 
 #lockText{
@@ -45,6 +44,7 @@
     font-weight: bolder;
     font-style: italic;
     opacity: 0;
+    user-select: none;
 }
 
 .slide-in{
