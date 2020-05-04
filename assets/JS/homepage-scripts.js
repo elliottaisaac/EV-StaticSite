@@ -78,7 +78,7 @@
 //Homepage carousel ------------------------------------------------------------------------------------------->
     let carouselObjects = [
         {
-            name: "Art",
+            name: "Artists",
             headline: "Lorum artsom",
             subhead: "Sed vulputate tortor non suscipit commodo.",
             paragraphText: "Vestibulum at pulvinar augue. Nulla eu erat sagittis, interdum dolor at, pretium orci. Pellentesque sit amet cursus risus. Nulla ornare augue augue, cursus fermentum odio aliquam et. Sed purus nisl, fermentum vel laoreet ac, malesuada et tellus. Vivamus et consequat diam, eu ultrices nibh. Integer malesuada lacus non pellentesque vulputate. Duis vitae sem convallis sapien finibus tempus imperdiet in elit. In facilisis neque nec mi pretium, et dictum tortor rutrum. Quisque ut auctor quam. Morbi eget fringilla turpis, ac pulvinar lacus. Suspendisse pulvinar, metus vel congue finibus, quam quam consequat risus, pulvinar blandit ante nulla quis nisi. Etiam convallis eros risus, eget tristique massa volutpat ac. Nulla maximus ut leo ut tincidunt. Praesent maximus, eros congue sollicitudin commodo, nunc lectus imperdiet arcu, non pellentesque mauris ante vitae turpis. Nullam ultrices id ante nec pellentesque. Fusce sed nulla id sem feugiat ultricies. Integer.",
