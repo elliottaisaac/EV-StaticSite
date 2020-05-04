@@ -54,9 +54,12 @@ if(document.documentElement.clientWidth < 600) isMobile = true;
         prevScroll = scroll <= 0 ? 0 : scroll;
     });
 
-    //color EV logo on hover
+    //color header logos on hover
     document.querySelector("#EVlogo").addEventListener("mouseover", () => document.querySelector("#EVlogo").src = "assets/img/EVcolor.svg");
     document.querySelector("#EVlogo").addEventListener("mouseout", () => document.querySelector("#EVlogo").src = "assets/img/EV.svg");
+    document.querySelector("#headerLogo").addEventListener("mouseover", () => document.querySelector("#headerLogo").src = "assets/img/IHcolor.svg");
+    document.querySelector("#headerLogo").addEventListener("mouseout", () => document.querySelector("#headerLogo").src = "assets/img/IH.svg");
+    
 // -------------------------------------------------------------------------------------------> nav scripts
 
 
