@@ -149,12 +149,12 @@
     -webkit-transform: translate(0,0);
     -ms-transform: translate(0,0);
     transform: translate(0,0);
-    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    transition: transform .125s ease-in-out,-webkit-transform .125s ease-in-out;
 }
 
 .linkBtn a:hover .linkBtn {
     background-color: var(--main-color-dark) !important;
 }
-.linkBtn a:hover .arrow{
+.linkBtn a:hover .arrow, .linkBtn:hover .arrow{
     transform: translateX(24px)
 }
