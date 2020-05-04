@@ -1,7 +1,7 @@
 //Line-Plot Navigation ------------------------------------------------------------------------------------------->
     let distances;
-
-    window.addEventListener("mousemove", (e) => {
+    lineNav
+    document.querySelector("#lineNav").addEventListener("mousemove", (e) => {
         distances = [];
         let mouseXpos = e.clientX;
         let mouseYpos = e.clientY;

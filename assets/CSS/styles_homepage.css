@@ -33,8 +33,8 @@
 .linePlotLabel{
     font-family: museo-sans, sans-serif;
     font-weight: bold;
-    transform: translateX(500px);
-    transition: transform 0.2s ease-out;
+    transform: translateX(125px);
+    transition: transform 0.15s ease-out;
 }
 
 .slide-in{
