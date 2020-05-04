@@ -14,8 +14,6 @@
     document.querySelectorAll("#lineNav svg g circle").forEach(circle => {
         circle.setAttribute("cx", coords[idx].x);
         circle.setAttribute("cy", coords[idx].y);
-        circle.setAttribute("r", "6");
-        circle.style.fill = "#613cf5";
         idx++;
     });
     idx = 0;
@@ -48,6 +46,8 @@
                     distance: GetDistance(e.clientX, e.clientY, dot.getBoundingClientRect().left, dot.getBoundingClientRect().top),
                     name: dot.id
                 }
+                dot.setAttribute("r", "6");
+                dot.style.fill = "#613cf5";
                 distances.push(Dot);
                 document.querySelectorAll(".linePlotLabel").forEach(l => {
                     l.style.fill = "transparent"; 
