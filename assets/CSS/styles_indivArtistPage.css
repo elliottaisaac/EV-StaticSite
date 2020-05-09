@@ -37,7 +37,6 @@
     height: 65vh;
     width: 100vw;
     padding-top: 100px;
-
     background-color: lightgray;
 }
 #quickGallery {
@@ -74,4 +73,160 @@
     left: 0px;
     background: linear-gradient(transparent,rgba(0,0,0,0.5),rgba(0,0,0,0.7),rgba(0,0,0,0.9));
 }
+/*Using iPad Pro for reference*/
+@media only screen and (max-width:1200px){
+    #artist{
+        padding-top:40px;
+        height: 40vh;
+    }
+    #artistPic{
+        margin-left:5vw;
+        height:35vw;
+        width:35vw;
+    }
+    #nameBio{
+        margin-right:12vw;
+    }
+    #artistName{
+        font-size:48px;
+    }
+    #artistBio{
+        padding-top:20px;
+    }
+    #artistArt{
+        padding-top:50px;
+        height:80vh;
+    }
+    #quickGallery{
+        margin-left: 6.5vw;
+        height:60vw;
+        width:90vw;
+    }
+    #currentGalleryPic {
+        height: 60vw;
+        width: 90vw;
+    }
+    #artInfo {
+        width: 100vw;
+        font-size: 20px;
+        padding-top: 5vw;
+        padding-left: 10vw;
+    }
+    .bottom-text {
+        font-size: 24px;
+        width: 90vw;
+    }
+}
+/*Using iPad as reference*/
+@media only screen and (max-width:800px) {
+    #artist{
+        height:45vh;
+    }
+    #artistName{
+        font-size:38px;
+    }
+    #artistBio{
+        font-size: 16px;
+    }
+    #artistArt{
+        padding-top:20px;
+        height:95vh;
+    }
+    #quickGallery{
+        margin-left:3.5vw;
+    }
+    
+}
+/*Using 600 x 900 as reference*/
+@media only screen and (max-width:600px){
+    #artist {
+        padding-top: 20px;
+        height: 45vh;
+    }
 
+    #artistPic {
+        margin-left: 5vw;
+        height: 30vw;
+        width: 30vw;
+        border-radius: 30px;
+    }
+
+    #artistName {
+        padding-left: 20px;
+        padding-top: 40px;
+        font-size: 32px;
+        color: deepskyblue;
+        text-align: left;
+    }
+
+    #artistArt{
+        height:70vh;
+    }
+
+    #artistBio {
+        height: 30vh;
+        float: right;
+        margin-top: 8vh;
+        margin-left: -40vw;
+        margin-right: 0vw;
+        font-size: 14px;
+    }
+
+    #artistArt {
+        background-color: white;
+        padding-top: 0px;
+        min-height: 80vh;
+    }
+
+    #artInfo {
+        font-size: 14px;
+    }
+
+    .bottom-text {
+        font-size: 14px;
+        width: 90vw;
+    }
+}
+/*Using iPhones as reference*/
+@media only screen and (max-width:420px) {
+     #artist {
+        min-height: 50vh;
+    }
+    #artistName {
+        padding-left: 0px;
+        padding-top: 10px;
+        font-size: 28px;
+    }
+
+    #artistBio{
+        margin-top:3vh;
+    }
+
+    #artistArt {
+        background-color: white;
+        padding-top: 0px;
+        min-height: 90vh;
+    }
+}
+/*Using Samsung Galaxy Phones as Reference*/
+@media only screen and (max-width:360px) {
+    #artist {
+        min-height: 60vh;
+    }
+
+    #artistName {
+        padding-top: 15px;
+        font-size: 24px;
+    }
+
+    #artistBio{
+        margin-top:4vh;
+    }
+
+    #artistArt {
+        min-height: 85vh;
+    }
+    #artInfo{
+        font-size:12px;
+    }
+}
