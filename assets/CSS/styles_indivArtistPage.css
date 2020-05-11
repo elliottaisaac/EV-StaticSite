@@ -39,6 +39,10 @@
     padding-top: 100px;
     background-color: lightgray;
 }
+
+/*
+    In order to ensure the picture stays the correct size relative to the page, both height and width use the same reference point.
+*/
 #quickGallery {
     height: calc((2/3)*32vw);
     width: 32vw;
@@ -59,11 +63,19 @@
     width:50vw;
     font-size:22px;
 }
+
+/*
+    This makes sure the overlay text is properly placed.
+*/
 .container {
     position: relative;
     color: white;
     text-align:center;
 }
+
+/*
+    Gallery text overlay with gradient
+*/
 .bottom-text {
     font-size: 20px;
     font-weight: 500;
@@ -79,44 +91,54 @@
         padding-top:40px;
         height: 40vh;
     }
+
     #artistPic{
         margin-left:5vw;
         height:35vw;
         width:35vw;
     }
+
     #nameBio{
         margin-right:12vw;
     }
+
     #artistName{
         font-size:48px;
     }
+
     #artistBio{
         padding-top:20px;
     }
+
     #artistArt{
         padding-top:50px;
         height:80vh;
     }
+
     #quickGallery{
         margin-left: 6.5vw;
         height:60vw;
         width:90vw;
     }
+
     #currentGalleryPic {
         height: 60vw;
         width: 90vw;
     }
+
     #artInfo {
         width: 100vw;
         font-size: 20px;
         padding-top: 5vw;
         padding-left: 10vw;
     }
+
     .bottom-text {
         font-size: 24px;
         width: 90vw;
     }
 }
+
 /*Using iPad as reference*/
 @media only screen and (max-width:800px) {
     #artist{
@@ -135,8 +157,8 @@
     #quickGallery{
         margin-left:3.5vw;
     }
-    
 }
+
 /*Using 600 x 900 as reference*/
 @media only screen and (max-width:600px){
     #artist {
@@ -189,9 +211,10 @@
 }
 /*Using iPhones as reference*/
 @media only screen and (max-width:420px) {
-     #artist {
+    #artist {
         min-height: 50vh;
     }
+
     #artistName {
         padding-left: 0px;
         padding-top: 10px;
@@ -208,6 +231,7 @@
         min-height: 90vh;
     }
 }
+
 /*Using Samsung Galaxy Phones as Reference*/
 @media only screen and (max-width:360px) {
     #artist {
