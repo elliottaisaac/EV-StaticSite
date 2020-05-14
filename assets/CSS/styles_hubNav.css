@@ -5,29 +5,39 @@
     font-size: 38px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
+    text-transform: uppercase;
+    color: var(--main-color);
 }
 
-#hubNav{
-    margin-top:40px;
-    height:80vh;
-    width:100vw;
+#hubNav {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 65px;
+    margin-bottom: 100px;
+    padding: 0 30px;
+    justify-items: center;
 }
 
-#hubList{
-    float:left;
-    width:35vw;
-    height:60vh;
-    background-color:white;
-    align-self:center;
-    margin-top:-15px;
-    overflow:hidden;
+#hubList {
+    background-color: white;
+    align-self: center;
+}
+
+#hubNames {
+    gap: 20px;
+    display: grid;
 }
 
 #hubNames li {
     list-style-type: none;
+    max-width: 400px;
+    transition: all .3s;
 }
 
 #hubNames li a {
+    transition: all .3s;
+    padding: 14px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 20px;
@@ -35,81 +45,71 @@
     color: white;
     display: block;
     text-decoration: none;
-    height: 5vh;
-    width: 30vw;
-    background-color: var(--main-color);;
-    margin-top: 0vh;
-    margin-bottom: 1.5vh;
+    background-color: var(--main-color);
     text-decoration-style: none;
-    padding-top: 15px;
 }
 
-    #hubNames li a:hover {
-        background-color: #EAEBEC;
-        color: black;
-    }
-
-#hubInfo {
-    float: right;
-    margin-right: 100px;
-    width: 55vw;
-    height: 55vh;
+#hubNames li a:hover {
     background-color: #EAEBEC;
+    color: black;
 }
 
-#hubDescription{
-    float:left;
-    width:25vw;
+/* named hubs */
+#hubInfo {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    background-color: #EAEBEC;
+    padding: 30px;
+    gap: 35px;
 }
+
+#hubDescription {}
 
 #hubTitle {
-    margin-top:40px;
     text-align: center;
     font-size: 35px;
-    font-weight:900;
+    font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--main-color);;
+    color: var(--main-color);
+    margin-bottom: 20px;
 }
 
 #hubDescriptionText {
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
     font-size: 18px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#hubPics{
-    margin-top:50px;
-    float:right;
-    width: 30vw;
+#hubPics {}
+
+#mainHubPic,
+.gallery--imgs {
+    width: 100%;
+    height: auto;
 }
 
-#mainHubPic{
-    height: 255px;
-    width:382px;
-    background-color: var(--main-color);;
+#galleryPhotos {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
-#galleryPics{
-    width:400px;
+
+
+@media only screen and (max-width: 700px) {
+    #hubNav {
+        grid-template-columns: 1fr
+    }
+
+    #hubInfo {
+        grid-template-columns: 1fr;
+    }
 }
 
-#gallery1 {
-    height: 83px;
-    width:125px;
-    background-color:yellow;
-}
+@media only screen and (max-width: 1150px) {
 
-#gallery2 {
-    height: 83px;
-    width: 125px;
-    background-color:green;
-}
-
-#gallery3 {
-    height: 83px;
-    width: 125px;
-    background-color:purple;
+    #hubInfo {
+        grid-template-columns: 1fr;
+    }
 }
